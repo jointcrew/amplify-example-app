@@ -1,0 +1,19 @@
+version: 1
+applications:
+  - frontend:
+      phases:
+        preBuild:
+          commands:
+            - npm ci
+        build:
+          commands:
+            - npx nx build amplify-example-app
+      artifacts:
+        baseDirectory: dist/apps/amplify-example-app/.next
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+      buildPath: /
+    appRoot: apps/amplify-example-app
