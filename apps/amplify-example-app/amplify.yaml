@@ -4,7 +4,7 @@ applications:
       phases:
         preBuild:
           commands:
-            - echo '( ◠‿◠ )'
+            - echo '( ◠‿◠ ) やあ'
             - npm ci
             - pwd
         build:
