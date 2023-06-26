@@ -1,0 +1,21 @@
+version: 1
+applications:
+  - frontend:
+      phases:
+        preBuild:
+          commands:
+            - echo '( ◠‿◠ )'
+            - npm ci
+            - pwd
+        build:
+          commands:
+            - npx nx build admin
+      artifacts:
+        baseDirectory: dist/apps/admin/.next
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+      buildPath: /
+    appRoot: apps/admin
