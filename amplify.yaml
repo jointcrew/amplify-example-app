@@ -9,7 +9,7 @@ applications:
             - npm ci
         build:
           commands:
-            - npx nx build amplify-example-app
+            - npx nx build amplify-example-app --verbose
       artifacts:
         baseDirectory: dist/apps/amplify-example-app/.next
         files:
@@ -23,7 +23,7 @@ applications:
             - npm ci
         build:
           commands:
-            - npx nx build admin
+            - npx nx build admin --verbose
       artifacts:
         baseDirectory: dist/apps/admin/.next
         files:
